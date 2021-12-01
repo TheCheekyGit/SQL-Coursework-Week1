@@ -76,6 +76,16 @@ homework=# SELECT date, transaction_no, supplier_inv_no, description, amount FRO
 ### 5. Show the date, transaction_no, supplier_inv_no, description and amount for those transactions whose amount is £25,000, £30,000, £35,000 or £40,000.
 
 ```sql
+homework=# SELECT date, transaction_no, supplier_inv_no, description, amount FROM spends WHERE amount = 25000 OR amount = 30000 OR amount = 35000 OR amount = 40000;
+    date    | transaction_no | supplier_inv_no |                    description                    | amount
+------------+----------------+-----------------+---------------------------------------------------+--------
+ 2021-03-01 |       37588987 | 11716           | Waste Volume                                      |  25000
+ 2021-03-01 |       37698700 | 11795           | Waste Volume                                      |  25000
+ 2021-03-01 |       37520209 | INV4131         | Site surveys and weekly design/Progress Meetings. |  25000
+ 2021-04-01 |       37801641 | 305719          | Fire Alarm Infrastructure Replacement             |  25000
+ 2021-04-01 |       37854035 | 3780119745      | CALL OFF PO - REMOTE ACCESS                       |  30000
+ 2021-04-01 |       38059452 | 7032500381      | Recharge of intersystems                          |  40000
+(6 rows)
 
 ```
 
